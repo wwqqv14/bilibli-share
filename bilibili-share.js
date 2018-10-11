@@ -37,7 +37,7 @@
   }else if (TimeShare != myDate){
     localStorage.setItem('TimeShare',myDate);
     $.ajax("https://api.bilibili.com/x/web-interface/share/add",{
-          data:{'aid':avId,'jsonp':'jsonp','csrf':'d5210430e7e3055e8d82de2468a9926c'},
+          data:{'aid':avId,'jsonp':'jsonp','csrf':bili_jct},
           xhrFields: {withCredentials: true},
           type:"POST",
           success:function(res){console.log(res)}
